@@ -1,0 +1,129 @@
+body {
+	background-color: LightSteelBlue;
+	font-family: cursive;
+	display: flex;
+	justify-content: center;
+  }
+  
+  button {
+	font-weight: bold;
+	height: 30px;
+	width: 120px;
+	margin-left: 12px;
+	margin-top: 10px;
+	border-radius: 20%;
+	border: 2px solid Navy;
+	background: linear-gradient(
+	  -45deg,
+	  SteelBlue,
+	  MediumSlateBlue,
+	  LightSkyBlue,
+	  CadetBlue
+	);
+  }
+  
+  div {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  ol {
+	font-size: 24px;
+  }
+  
+  li {
+	border-bottom: 2px solid Navy;
+	width: 400px;
+	margin: 12px;
+	display: flex;
+  }
+  
+  .navy-x {
+	color: Navy;
+	margin-left: 10px;
+  }
+  
+  h4 {
+	width: 100%;
+	font-size: 44px;
+	padding: 12px;
+	display: flex;
+	justify-content: center;
+	border: 2px solid Navy;
+	background: linear-gradient(
+	  -75deg,
+	  SteelBlue,
+	  MediumSlateBlue,
+	  LightSkyBlue,
+	  CadetBlue
+	);
+  }
+  
+  input[type="text"] {
+	width: 60%;
+	height: 20px;
+	border: 2px solid Navy;
+  }
+  
+  .label {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  .label input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+  }
+  
+  .checkmark {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	height: 15px;
+	width: 15px;
+	background-color: #eee;
+	border-radius: 50%;
+	border: 1px solid Navy;
+  }
+  
+  .label input:checked ~ .checkmark {
+	background-color: #2196f3;
+  }
+  
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  
+  .label input:checked ~ .checkmark:after {
+	display: block;
+  }
+  
+  .label .checkmark:after {
+	left: 4px;
+	top: px;
+	width: 5px;
+	height: 8px;
+	border: solid #e91e63;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+  
+  .mnemonic {
+	color: Navy;
+	font-weight: bold;
+	padding-left: 4px;
+  }
