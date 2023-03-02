@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ToDoList() {
-     const [ToDos, setToDos]=React.useState([]);
+	const [ToDos, setToDos] = React.useState([]);
 
 	function toggleCheckById(id) {
 		setToDos((old) => {
@@ -49,6 +49,7 @@ export default function ToDoList() {
 
 
 	return (
+		<>
 		<div>
 			<ol
 				onClick={(evt) => {
@@ -81,6 +82,8 @@ export default function ToDoList() {
 				))}
 			</ol>
 		</div >
+		</>
 	)
 }
+
 
