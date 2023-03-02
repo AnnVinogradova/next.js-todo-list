@@ -1,9 +1,9 @@
-import React from "react";
+import {useState} from 'react';
 
 export default function Form() {
 
-	const [ToDos, setToDos] = React.useState([]),
-		[text, setText] = React.useState("");
+	const [ToDos, setToDos] = useState([]),
+		[text, setText] = useState("");
 
 
 
@@ -27,6 +27,9 @@ export default function Form() {
 				<button onClick={addTodo}>Добавить</button>
 				<button onClick={deleteButton}>Удалить</button>
 			</div>
+			<ul>
+			{ToDos.map(el=><li key={el.id}>{el.str}</li>)}
+			</ul>
 		</>
 	)
 }
