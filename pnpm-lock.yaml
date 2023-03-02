@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   next: ^13.2.3
@@ -6,7 +6,7 @@ specifiers:
   react-dom: ^18.2.0
 
 dependencies:
-  next: 13.2.3_biqbaboplfbrettd7655fr4n2y
+  next: 13.2.3_react-dom@18.2.0+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -164,7 +164,7 @@ packages:
     hasBin: true
     dev: false
 
-  /next/13.2.3_biqbaboplfbrettd7655fr4n2y:
+  /next/13.2.3_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-nKFJC6upCPN7DWRx4+0S/1PIOT7vNlCT157w9AzbXEgKy6zkiPKEt5YyRUsRZkmpEqBVrGgOqNfwecTociyg+w==}
     engines: {node: '>=14.6.0'}
     hasBin: true
