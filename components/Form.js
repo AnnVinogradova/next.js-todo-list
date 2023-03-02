@@ -1,9 +1,11 @@
-import {useState} from 'react';
+import React from 'react';
+import ToDo from "./ToDo";
 
 export default function Form() {
 
-	const [ToDos, setToDos] = useState([]),
-		[text, setText] = useState("");
+	const [ToDos, setToDos] = React.useState([{ id: 0, str: "Купить корм" },
+	{ id: 1, str: "Погладить мурзянку" }]),
+		[text, setText] = React.useState("");
 
 
 
@@ -27,9 +29,7 @@ export default function Form() {
 				<button onClick={addTodo}>Добавить</button>
 				<button onClick={deleteButton}>Удалить</button>
 			</div>
-			<ul>
-			{ToDos.map(el=><li key={el.id}>{el.str}</li>)}
-			</ul>
+			<ToDo />
 		</>
 	)
 }
