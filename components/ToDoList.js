@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ToDo() {
+export default function ToDoList() {
      const [ToDos, setToDos]=React.useState([]);
 
 	function toggleCheckById(id) {

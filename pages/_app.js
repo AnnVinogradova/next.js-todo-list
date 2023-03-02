@@ -8,6 +8,7 @@ export default function MyApp({ Component, pageProps }) {
 			<Header />
 			<Component {...pageProps} />
 			
+			
 		</>
 	);
 }

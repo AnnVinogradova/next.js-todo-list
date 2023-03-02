@@ -1,11 +1,10 @@
-import React from 'react';
-import ToDo from "./ToDo";
+import { useState } from "react";
+import ToDoList from "./ToDoList";
 
 export default function Form() {
 
-	const [ToDos, setToDos] = React.useState([{ id: 0, str: "Купить корм" },
-	{ id: 1, str: "Погладить мурзянку" }]),
-		[text, setText] = React.useState("");
+	const [ToDos, setToDos] = useState([]),
+		[text, setText] = useState("");
 
 
 
@@ -28,8 +27,10 @@ export default function Form() {
 				/>
 				<button onClick={addTodo}>Добавить</button>
 				<button onClick={deleteButton}>Удалить</button>
+				<ToDoList />
+				
 			</div>
-			<ToDo />
+			
 		</>
 	)
 }
