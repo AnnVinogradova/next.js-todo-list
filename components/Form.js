@@ -1,13 +1,10 @@
-import {useState} from "react";
-import ToDoList from "./ToDoList";
+import { useState } from "react";
+
 
 
 export default function Form() {
 
-	const [ToDos, setToDos] = useState([
-		{ id: 0, str: "Купить корм" },
-		{ id: 1, str: "Погладить мурзянку" }
-	]),
+	const [ToDos, setToDos] = useState([]),
 		[text, setText] = useState("");
 
 
@@ -33,7 +30,7 @@ export default function Form() {
 				<button onClick={deleteButton}>Удалить</button>
 			</div>
 			<ul>
-			{ToDos.map(el=><li key={el.id}>{el.str}</li>)}
+				{ToDos.map(el => <li key={el.id}>{el.str}</li>)}
 			</ul>
 		</>
 	)
