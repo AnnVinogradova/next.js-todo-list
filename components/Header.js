@@ -1,7 +1,11 @@
+import React from 'react';
+
 export default function Header() {
 	return <>
-		<div>
-			<h4>Мой список дел</h4>
+		<div className="App">
+			<header>
+				<h1>Мой список дел</h1>
+			</header>
 		</div>
 	</>
 }

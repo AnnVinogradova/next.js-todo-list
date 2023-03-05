@@ -1,129 +1,135 @@
-body {
-	background-color: LightSteelBlue;
-	font-family: cursive;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  body {
+	background-image: linear-gradient(120deg, #19da25 0%, #204322 100%);
+	color: #ffffff;
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+	display: flex;
+    justify-content: center;
+}
+  
+  header {
+	font-size: 2rem;
+  }
+  
+  header,
+  form {
+	min-height: 20vh;
 	display: flex;
 	justify-content: center;
-  }
-  
-  button {
-	font-weight: bold;
-	height: 30px;
-	width: 120px;
-	margin-left: 12px;
-	margin-top: 10px;
-	border-radius: 20%;
-	border: 2px solid Navy;
-	background: linear-gradient(
-	  -45deg,
-	  SteelBlue,
-	  MediumSlateBlue,
-	  LightSkyBlue,
-	  CadetBlue
-	);
-  }
-  
-  div {
-	display: flex;
 	align-items: center;
-	flex-direction: column;
   }
-  
-  ol {
-	font-size: 24px;
+  form input {
+	padding: 0.5rem;
+	font-size: 2rem;
+	background: #eee4e4;
   }
-  
-  li {
-	border-bottom: 2px solid Navy;
-	width: 400px;
-	margin: 12px;
-	display: flex;
+
+  form button {
+	padding: 1.2rem;
+	color: #e8eeee;
+	background: #1f504a;
+	cursor: pointer;
+	transition: all 0.3s ease;
   }
-  
-  .navy-x {
-	color: Navy;
-	margin-left: 10px;
-  }
-  
-  h4 {
-	width: 100%;
-	font-size: 44px;
-	padding: 12px;
+
+  .todo-container {
 	display: flex;
 	justify-content: center;
-	border: 2px solid Navy;
-	background: linear-gradient(
-	  -75deg,
-	  SteelBlue,
-	  MediumSlateBlue,
-	  LightSkyBlue,
-	  CadetBlue
-	);
+	align-items: center;
   }
   
-  input[type="text"] {
-	width: 60%;
-	height: 20px;
-	border: 2px solid Navy;
+  .todo-list {
+	min-width: 30%;
+	list-style: none;
   }
   
-  .label {
-	display: block;
-	position: relative;
-	padding-left: 35px;
+  .todo {
+	margin: 0.5rem;
+	background: #eee4e4;
+	font-size: 1.5rem;
+	color: #000000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 1s ease;
+	
+  }
+
+  .filter-todo {
+	background-color: #eee4e4;
+  }
+
+  .todo li {
+	flex: 1;
+  }
+  
+  .trash-btn,
+  .complete-btn {
+	background: #1f504a;
+	color: #ffffff;
+	border: none;
+	padding: 1rem;
 	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	font-size: 1rem;
+  }
+  .complete-btn {
+	background: #15b48f;
+  }
+  .todo-item {
+	padding: 0rem 0.5rem;
   }
   
-  .label input {
-	position: absolute;
+  
+  .fall {
+	transform: translateY(10rem) rotateZ(20deg);
 	opacity: 0;
+  }
+  
+  .completed {
+	text-decoration: line-through;
+	color:#1a0d09;
+	opacity: 0.5;
+  }
+  
+  select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	background-image: none;
+  }
+  
+  
+  .select {
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+  }
+  select {
+	color: #0b0b0b;
+	font-family: "Poppins", sans-serif;
 	cursor: pointer;
-	height: 0;
-	width: 0;
+	width: 14rem;
+	height: 3.4rem;
+	padding-left: 6px;
   }
   
-  .checkmark {
+  .select::after {
+	content: "\25BC";
 	position: absolute;
-	top: 8px;
-	left: 0;
-	height: 15px;
-	width: 15px;
-	background-color: #eee;
-	border-radius: 50%;
-	border: 1px solid Navy;
+	top: 0;
+	right: 0;
+	padding: 1.1rem;
+	background: #1f504a;
+	cursor: pointer;
+	pointer-events: none;
+	border: 2px solid #1a331a;
   }
   
-  .label input:checked ~ .checkmark {
-	background-color: #2196f3;
-  }
-  
-  .checkmark:after {
-	content: "";
-	position: absolute;
-	display: none;
-  }
-  
-  .label input:checked ~ .checkmark:after {
-	display: block;
-  }
-  
-  .label .checkmark:after {
-	left: 4px;
-	top: px;
-	width: 5px;
-	height: 8px;
-	border: solid #e91e63;
-	border-width: 0 3px 3px 0;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-  }
-  
-  .mnemonic {
-	color: Navy;
-	font-weight: bold;
-	padding-left: 4px;
-  }

@@ -1,39 +1,36 @@
-import { useState } from "react";
+import React from "react";
 
 
+export default function Form({ setInputText, toDos, setToDos, inputText,setStatus }) {
 
-export default function Form() {
+	const inputTextHandler = (evt) => {
+		setInputText(evt.target.value);
+	};
 
-	const [ToDos, setToDos] = useState([]),
-		[text, setText] = useState("");
+	const submitTodoHandler = (evt) => {
+		evt.preventDefault();
+		setToDos([...toDos,
+		{ text: inputText, completed: false, id: Math.random() * 1000 },
+		])
+		setInputText("");
+	};
 
-
-
-	function addTodo() {
-		setToDos([...ToDos, { str: text, id: Date.now() }]);
-		setText("");
+	const statusHandler = (evt) => {
+		setStatus(evt.target.value);
 	}
-
-
-	function deleteButton() {
-		setToDos((old) => old.filter((item) => !item.checked));
-	}
-
-	return (
-
-		<>
-			<div className="container">
-				<input type="text" value={text} placeholder="Введите новую задачу"
-					onInput={(evt) => setText(evt.target.value)}
-				/>
-				<button onClick={addTodo}>Добавить</button>
-				<button onClick={deleteButton}>Удалить</button>
+	return <>
+		<form>
+			<input onChange={inputTextHandler} value={inputText} type="text" className="todo-input"></input>
+			<button onClick={submitTodoHandler} className="todo-button" type="submit">+</button>
+			<div className="select">
+				<select onChange={statusHandler} name="toDos" className="filter-todo">
+					<option value="all">Все задачи</option>
+					<option value="completed">Завершенные задачи</option>
+					<option value="uncompleted">Не завершённые задачи</option>
+				</select>
 			</div>
-			<ul>
-				{ToDos.map(el => <li key={el.id}>{el.str}</li>)}
-			</ul>
-		</>
-	)
+		</form>
+	</>
 }
 
 
