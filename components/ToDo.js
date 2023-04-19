@@ -37,30 +37,38 @@ export default function ToDo({ text, toDo, toDos, setToDos }) {
 		e.preventDefault();
 		const droppedElementId = e.dataTransfer.getData("text/plain");
 		const droppedElement = document.getElementById(droppedElementId);
+		if (!droppedElement) return;
 		const newOrder = Array.from(e.target.parentNode.children).indexOf(e.target);
 		const oldOrder = Array.from(e.target.parentNode.children).indexOf(droppedElement);
 		if (newOrder > oldOrder) {
 			if (e.target.nextSibling) {
-			  e.target.parentNode.insertBefore(droppedElement, e.target.nextSibling);
+				e.target.parentNode.insertBefore(droppedElement, e.target.nextSibling);
 			} else {
-			  e.target.parentNode.appendChild(droppedElement);
+				e.target.parentNode.appendChild(droppedElement);
 			}
-		  } else {
+		} else {
 			e.target.parentNode.insertBefore(droppedElement, e.target);
-		  }
+		}
 		e.target.classList.remove("over");
 	};
 
 	return <>
 		<div className="todo" draggable="true" onDragStart={dragStartHandler} onDragEnd={dragEndHandler}>
-			<li id={toDo.id} className={`todo-item ${toDo.completed ? "completed" : ""}`}
+			<li
+				id={toDo.id}
+				className={`todo - item ${toDo.completed ? "completed" : ""}`}
 				onDragOver={dragOverHandler}
 				onDragLeave={dragLeaveHandler}
-				onDrop={dropHandler}>
-				{text}</li>
-			<button onClick={completeHandler} className="complete-btn">Завершенные</button>
-			<button onClick={deleteHandler} className="trash-btn">Удалить</button>
-		</div>
+				onDrop={dropHandler}
+			>
+				{text}
+			</li>
+			<button onClick={completeHandler} className="complete-btn">
+				Завершенные
+			</button>
+			<button onClick={deleteHandler} className="trash-btn">
+				Удалить
+			</button>
+		</div >
 	</>
-}
-
+};
