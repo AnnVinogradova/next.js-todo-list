@@ -132,4 +132,20 @@
 	pointer-events: none;
 	border: 2px solid #1a331a;
   }
+
+  .todo-item.over {
+	background-color: #f5f5f5;
+   }
+   
+   .todo-item.dragging {
+	opacity: 0.5;
+   }
+
+   .todo-item {
+	cursor: move;
+  }
+  
+  .over {
+	border: 2px dashed #ccc;
+  }
   

@@ -1,8 +1,8 @@
-import React from "react";
+
 import ToDo from "./ToDo";
 
 export default function ToDoList({ toDos, setToDos, filteredToDos }) {
-
+	
 	return <>
 		<div className="todo-container">
 			<ul className="todo-list">

@@ -1,5 +1,3 @@
-import React from "react";
-
 
 export default function Form({ setInputText, toDos, setToDos, inputText,setStatus }) {
 
