@@ -1,9 +1,9 @@
 
-import ToDoPage from '../components/ToDoPage';
+import ToDoList from '../components/ToDoList';
 
 export default function Page() {
 
 	return <>
-			<ToDoPage />
+			<ToDoList />
 		</>
 }
