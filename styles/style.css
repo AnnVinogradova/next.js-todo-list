@@ -78,7 +78,7 @@ body {
   }
   
 li:hover {
-  border: 2px dashed gray;
+  border: 2px dashed rgb(14, 119, 151);
 }
 
 li:before {
@@ -108,7 +108,7 @@ li:before {
   }
 
   li.item.dragging {
-	background-color: #F5F5F5;
+	background-color: #1e6887;
   }
 
   .move-up-btn {
@@ -141,4 +141,8 @@ li:before {
 	cursor: pointer;
 	margin: 4px;
   }
+
+  
+
+  
   
