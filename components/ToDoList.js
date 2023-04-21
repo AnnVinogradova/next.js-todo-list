@@ -49,7 +49,6 @@ export default function ToDoList() {
 
   return <>
     <div className="container">
-      <h1>To Do List</h1>
       <ToDoForm handleAddToDo={handleAddToDo} />
       <ul>
         {toDos.map((toDo, index) => (
